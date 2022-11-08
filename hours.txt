@@ -1,0 +1,23 @@
+Departments:
+IT: Intern, Part-time, Full-time, Manager
+Sales: Provisional, Associate, Vice-president
+Warehouse: Dockworker, Full, Floater, Safety-officer, Coordinator
+Overseas: Associate, Vice-president
+Employees:
+Bill Bower: 8 hours 20 minutes 7hours 8hours 30 minutes 9hrs 10min 57 minutes Warehouse Dockworker
+Betty Ross: 8hrs 8hrs 30min 7hrs 5min 8hrs 7hrs 10min IT Part-time
+Jessica Gonzales: 4 hours 1hour 20 hours 15 minutes 4 hours 31 mins Warehouse Safety-officer
+Brandon Templeton: 10hours 10hours 5 minutes 9 hours 5 hours 55 minutes 9 hours 5 mins IT Full-time
+Jake Kemp: 5hrs 15min 6hrs 20min 8hrs 5min 2hr 5hr 30min Part-time IT
+Richard He: 2hrs 4min 1hr 17min 4 hrs 19min 4hrs 11mins Floater Warehouse
+Sebastian Choaski: 12hrs 14 min 13hrs 10 hrs 17min 11 hours 10 hours 58mins Vice-President Overseas
+Brad Fisk: 9hrs 8hrs 10hrs 12min 9hrs 4min 8hours 6min 3hrs 24min 1hr 6min Overseas Associate
+Ally Uoni: 5hrs 14minutes 18 hours 4 hours 3 hours 1 hour 5 minutes Sales Provisional
+Hong Park: 3hrs 18min 2hr 17min 3 hrs 1min 3hrs 41mins Warehouse Floater
+Ting Le: 2hrs 4min 1hr 15min 2 hrs 44min 5hrs 11mins Warehouse Dockworker
+Tim Hecker: 2hr 5 minutes 13 hrs 5 minutes 2 hours 5 minutes Vice-president Sales
+Koneka Hitsukia: 8hrs 6hrs 5min 7hrs 6 hrs 9 hrs 8 min Full-time IT
+Kent Rogers: 9hrs 8hrs 1min 9 hrs 7hrs 5 min 8 hrs 55min 6min 1hr Overseas Associate
+Frank Williams: 7 hours 10 minutes 6hours 1 minute 1 hour 50 minutes 8hours 10min 1hour IT Manager
+Lester Hoax 8hrs 5min 8hrs 30min 7hrs 5min 8hrs 7hrs 10min Associate Sales
+EOF

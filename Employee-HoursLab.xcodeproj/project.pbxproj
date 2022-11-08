@@ -25,6 +25,7 @@
 /* Begin PBXFileReference section */
 		7647BCB1291A09420049FBF4 /* Employee-HoursLab */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Employee-HoursLab"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7647BCB4291A09420049FBF4 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		7647BCBB291A0C360049FBF4 /* hours.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = hours.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +42,7 @@
 		7647BCA8291A09420049FBF4 = {
 			isa = PBXGroup;
 			children = (
+				7647BCBB291A0C360049FBF4 /* hours.txt */,
 				7647BCB3291A09420049FBF4 /* Employee-HoursLab */,
 				7647BCB2291A09420049FBF4 /* Products */,
 			);
