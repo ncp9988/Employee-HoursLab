@@ -8,20 +8,40 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+
 using namespace std;
+
+string wholeString;
+string name;
+int posColon;
+string delimeter = " ";
+
 
 
 // get department name
+void getDepartment ()
+{
+    ifstream inputfile;
+    inputfile.open("hours.txt");
+    string line;
+    getline(inputfile, line);
+    string departmentString;
 
-// add up hours
+    for ( int i = 0; i<=4 ; i++)
+    {
+        getline(inputfile, departmentString);
+        string department = departmentString.substr(0, departmentString.find(":", 1));
 
-// add up number of employee
+        cout << department << endl;
+    
+    }
+    
+    
+    
+}
 
-// get part-time employee
 
-// get full-time employee
-
-void getString()
+void getName()
 {
     ifstream inputfile;
     inputfile.open("hours.txt");
@@ -34,19 +54,37 @@ void getString()
     getline(inputfile, line);
     
     
-    string wholeString;
     
-    while (wholeString != "EOF") {
-        // do something with the line
+    while (wholeString != "EOF" )
+    {
         getline(inputfile, wholeString);
-        cout << wholeString << endl;
+        posColon = wholeString.find(":", 1);
+        name = wholeString.substr(0, posColon);
+        cout << name << endl;
+        int pos;
+        //cout << wholeString << endl;
 
+        
+        
+        while ( (pos = wholeString.find(" ") )!= string::npos)
+        {
+
+            string token =wholeString.substr(0,pos);
+            cout << "\t"<<token << endl;
+            wholeString.erase(0, (pos +1));
+            
+            
+        }
+        
+        
     }
     
+    
+
 }
 
 int main() {
-    getString();
-
+    getDepartment();
+    getName();
     return 0;
 }
