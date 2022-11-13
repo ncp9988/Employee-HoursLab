@@ -77,6 +77,22 @@ void getEmployees(string filename, string deptName, string jobTitle)
         
         
         
+        // getting Department and Employee type
+        int posSpace = -1;
+        for ( int i = line.length(), int count = 0; i>0 ; i--)
+        {
+            if (line[i] == ' ')
+                cout ++;
+            if (cout == 2)
+                posSpace = i;
+        }
+        
+        string dept_job = line.substr(posSpace);
+        line.erase(posSpace);
+        
+        
+        
+        
         
         while (true)
         {
