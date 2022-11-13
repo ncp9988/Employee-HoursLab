@@ -84,7 +84,17 @@ void getName()
 }
 
 int main() {
-    getDepartment();
-    getName();
+    ifstream file; file.open("Hours.txt");
+    string department = "";
+    
+    // skip the "Department :" line
+    getline( file, department);
+    
+    while (true)
+    {
+        getline (file , department);
+        // get name of department
+        string name = department.substr(0, department.find(":"));
+    }
     return 0;
 }
