@@ -41,18 +41,22 @@ void getDepartment ()
 }
 
 
-void getName()
+void getEmployees(string filename, string deptName, string jobTitle)
 {
     ifstream inputfile;
-    inputfile.open("hours.txt");
-    string line;
-    getline(inputfile, line);
-    getline(inputfile, line);
-    getline(inputfile, line);
-    getline(inputfile, line);
-    getline(inputfile, line);
-    getline(inputfile, line);
     
+    // open input file
+    inputfile.open("hours.txt");
+    
+    string line;
+    
+    // loop to skip line until line "Employee:"
+    while(true)
+    {
+        getline( inputfile, line);
+        if ( line == "Employees:")
+            break;
+    }
     
     
     while (wholeString != "EOF" )
