@@ -78,7 +78,20 @@ void getEmployees(string filename, string deptName, string jobTitle)
         
         
         
-        
+        while (true)
+        {
+            int Hpos = line.find("h");
+            int Mpos = line.find("m");
+            
+            if(Hpos < Mpos)
+            {
+                // read in hours
+            }
+            else
+            {
+                // read in minutes
+            }
+        }
     }
     
     
