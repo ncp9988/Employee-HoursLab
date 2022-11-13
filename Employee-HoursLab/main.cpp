@@ -11,10 +11,7 @@
 
 using namespace std;
 
-string wholeString;
-string name;
-int posColon;
-string delimeter = " ";
+
 
 
 
@@ -59,31 +56,22 @@ void getEmployees(string filename, string deptName, string jobTitle)
     }
     
     
-    while (wholeString != "EOF" )
+    while ( line != "EOF")
     {
-        getline(inputfile, wholeString);
+        getline( inputfile, line);
+        string wholeString;
+        string name;
+        int posColon;
+        string delimeter = " ";
+        
         posColon = wholeString.find(":", 1);
         name = wholeString.substr(0, posColon);
         cout << name << endl;
-        int pos;
-        //cout << wholeString << endl;
 
-        
-        
-        while ( (pos = wholeString.find(" ") )!= string::npos)
-        {
-
-            string token =wholeString.substr(0,pos);
-            cout << "\t"<<token << endl;
-            wholeString.erase(0, (pos +1));
-            
-            
-        }
-        
-        
     }
     
     
+   
 
 }
 
