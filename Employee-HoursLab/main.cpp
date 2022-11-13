@@ -40,7 +40,7 @@ void getDepartment ()
 
 void getEmployees(string filename, string deptName, string jobTitle)
 {
-    cout << deptname << " " << jobTitle<< endl;
+    cout << deptName << " " << jobTitle<< endl;
     ifstream inputfile;
     
     // open input file
@@ -60,7 +60,6 @@ void getEmployees(string filename, string deptName, string jobTitle)
     while ( line != "EOF")
     {
         getline( inputfile, line);
-        string wholeString;
         string name;
         int posColon;
         string delimeter = " ";
@@ -69,7 +68,7 @@ void getEmployees(string filename, string deptName, string jobTitle)
         
         name = line.substr(0, posColon);// get the name from the line using substr
         
-        line.erase(0, posColon +1);// delete everything befor colon and space
+        line.erase(0, posColon +2);// delete everything befor colon and space
         
         cout << name << endl;
         
@@ -79,25 +78,38 @@ void getEmployees(string filename, string deptName, string jobTitle)
         
         // getting Department and Employee type
         int posSpace = -1;
-        for ( int i = line.length(), int count = 0; i>0 ; i--)
+        int count = 0;
+        for ( int i = line.length(); i>0 ; i--)
         {
             if (line[i] == ' ')
-                cout ++;
-            if (cout == 2)
+                count ++;
+            if (count == 2)
                 posSpace = i;
         }
         
-        string dept_job = line.substr(posSpace);
+        string dept_job = line.substr(posSpace+1);
         line.erase(posSpace);
         
         
+        // if this employee is not the right department and job type then skip
+        if (dept_job.find(deptName) == string::npos)
+            continue; // skip this employee
+        if (dept_job.find(jobTitle) == string::npos)
+            continue; // skip this employee
         
         
         
+        
+        int totalHours = 0;
         while (true)
         {
             int Hpos = line.find("h");
             int Mpos = line.find("m");
+            
+            
+            if (Hpos == string::npos && Mpos == string::npos) //no labels left
+                break;
+            
             
             if(Hpos < Mpos)
             {
@@ -110,8 +122,15 @@ void getEmployees(string filename, string deptName, string jobTitle)
             else
             {
                 // read in minutes
+                int spaceAfter = line.find(" ", Mpos);
+                line.erase(Mpos, spaceAfter-Mpos);
+                int minutes = stoi(line.substr(0, Mpos));
+                line.erase(0, Mpos);
             }
         }
+        
+        
+        // ouput the hours here
     }
     
     
@@ -120,7 +139,8 @@ void getEmployees(string filename, string deptName, string jobTitle)
 }
 
 int main() {
-    ifstream file; file.open("Hours.txt");
+    ifstream file;
+    file.open("Hours.txt");
     string department = "";
     
     // skip the "Department :" line
@@ -130,8 +150,15 @@ int main() {
     {
         getline (file , department);
         
+        if (department == "Employees: ")
+            break;
+        
         // get name of department
         string name = department.substr(0, department.find(":"));
+        
+        while (true)
+        {
+        }
+        return 0;
     }
-    return 0;
 }
