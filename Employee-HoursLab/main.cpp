@@ -40,6 +40,7 @@ void getDepartment ()
 
 void getEmployees(string filename, string deptName, string jobTitle)
 {
+    cout << deptname << " " << jobTitle<< endl;
     ifstream inputfile;
     
     // open input file
@@ -64,10 +65,20 @@ void getEmployees(string filename, string deptName, string jobTitle)
         int posColon;
         string delimeter = " ";
         
-        posColon = wholeString.find(":", 1);
-        name = wholeString.substr(0, posColon);
+        posColon = line.find(":", 1); // find the position of the colon
+        
+        name = line.substr(0, posColon);// get the name from the line using substr
+        
+        line.erase(0, posColon +1);// delete everything befor colon and space
+        
         cout << name << endl;
-
+        
+        
+        
+        
+        
+        
+        
     }
     
     
