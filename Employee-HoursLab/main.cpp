@@ -102,6 +102,10 @@ void getEmployees(string filename, string deptName, string jobTitle)
             if(Hpos < Mpos)
             {
                 // read in hours
+                int spaceAfter = line.find(" ", Hpos);
+                line.erase(Hpos, spaceAfter-Hpos);
+                int hour = stoi(line.substr(0, Hpos));
+                line.erase(0, Hpos);
             }
             else
             {
