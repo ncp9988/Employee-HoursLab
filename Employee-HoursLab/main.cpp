@@ -93,6 +93,7 @@ int main() {
     while (true)
     {
         getline (file , department);
+        
         // get name of department
         string name = department.substr(0, department.find(":"));
     }
